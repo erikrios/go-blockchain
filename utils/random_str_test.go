@@ -17,8 +17,6 @@ func TestRandStr(t *testing.T) {
 		t.Run(testCase.name, func(t *testing.T) {
 			got := RandStr(testCase.inputLength)
 
-			t.Log(got)
-
 			if len(got) != int(testCase.inputLength) {
 				t.Fatalf("got %d, want %d", len(got), testCase.inputLength)
 			}
