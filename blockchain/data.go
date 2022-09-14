@@ -1,9 +1,9 @@
 package blockchain
 
 type Data struct {
-	Sender   string
-	Receiver string
-	Amount   uint64
+	Sender   string `json:"sender"`
+	Receiver string `json:"receiver"`
+	Amount   uint64 `json:"amount"`
 }
 
 func NewData(
