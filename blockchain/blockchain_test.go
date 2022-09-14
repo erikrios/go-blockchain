@@ -24,7 +24,7 @@ func TestNewBlockhain(t *testing.T) {
 func TestCreateGenesisBlock(t *testing.T) {
 	t.Run("it should return valid genesis block, when createGenesisBlock msthod is invoked", func(t *testing.T) {
 		data := NewData("", "", 0)
-		expected := NewBlock("", *data, time.Now())
+		expected := NewBlock(*data, time.Now())
 
 		got := createGenesisBlock()
 

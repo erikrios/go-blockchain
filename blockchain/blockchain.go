@@ -16,6 +16,6 @@ func NewBlockchain() *Blockchain {
 
 func createGenesisBlock() Block {
 	data := NewData("", "", 0)
-	block := NewBlock("", *data, time.Now())
+	block := NewBlock(*data, time.Now())
 	return *block
 }

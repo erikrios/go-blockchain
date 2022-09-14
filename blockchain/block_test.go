@@ -16,7 +16,7 @@ func TestNewBlock(t *testing.T) {
 		amount := 200
 
 		data := NewData(senderName, receiverName, uint64(amount))
-		block := NewBlock(utils.RandStr(64), *data, time.Now())
+		block := NewBlock(*data, time.Now())
 		if block == nil {
 			t.Fatal("data shouldn't nil")
 		}
@@ -30,7 +30,7 @@ func TestCalculateHash(t *testing.T) {
 		amount := 200
 
 		data := NewData(senderName, receiverName, uint64(amount))
-		block := NewBlock(utils.RandStr(64), *data, time.Now())
+		block := NewBlock(*data, time.Now())
 		got := block.CalculateHash()
 
 		if len(got) != hashLen {

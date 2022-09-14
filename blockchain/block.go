@@ -15,12 +15,10 @@ type Block struct {
 }
 
 func NewBlock(
-	prevHash string,
 	data Data,
 	timestamp time.Time,
 ) *Block {
 	block := &Block{
-		PrevHash:  prevHash,
 		Data:      data,
 		Timestamp: timestamp,
 	}
