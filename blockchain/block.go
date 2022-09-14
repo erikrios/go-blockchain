@@ -11,6 +11,7 @@ type Block struct {
 	PrevHash  string
 	Data      Data
 	Timestamp time.Time
+	Hash      string
 }
 
 func NewBlock(
@@ -18,11 +19,15 @@ func NewBlock(
 	data Data,
 	timestamp time.Time,
 ) *Block {
-	return &Block{
+	block := &Block{
 		PrevHash:  prevHash,
 		Data:      data,
 		Timestamp: timestamp,
 	}
+
+	block.Hash = block.CalculateHash()
+
+	return block
 }
 
 func (b *Block) CalculateHash() string {
