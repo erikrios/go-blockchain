@@ -10,7 +10,7 @@ const newBlockchainLength = 1
 
 func TestNewBlockhain(t *testing.T) {
 	t.Run("it should return non nil object, when the function is invoked", func(t *testing.T) {
-		got := NewBlockchain()
+		got := NewBlockchain(5)
 		if got == nil {
 			t.Fatal("data shouldn't nil")
 		}
