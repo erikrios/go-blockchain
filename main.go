@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	myBlockchain := blockchain.NewBlockchain(8)
+	myBlockchain := blockchain.NewBlockchain(5)
 
 	firstData := blockchain.NewData(utils.RandStr(5), utils.RandStr(8), 5000)
 	firstBlock := blockchain.NewBlock(*firstData, time.Now())
